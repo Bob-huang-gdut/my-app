@@ -29,6 +29,11 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
+    {
+      name: 'Transfer 表单示例',
+      path: '/transferDemo',
+      component: './TransferDemo',
+    },
   ],
   npmClient: 'pnpm',
 });
