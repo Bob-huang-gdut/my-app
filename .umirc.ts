@@ -30,7 +30,7 @@ export default defineConfig({
       component: './Table',
     },
     {
-      name: 'Transfer 表单示例',
+      name: '报价汇总弹窗（0923）',
       path: '/transferDemo',
       component: './TransferDemo',
     },
