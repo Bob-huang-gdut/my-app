@@ -2,67 +2,58 @@
 // 该文件由 OneAPI 自动生成，请勿手动修改！
 
 declare namespace API {
-  interface PageInfo {
-    /** 
-1 */
-    current?: number;
-    pageSize?: number;
-    total?: number;
-    list?: Array<Record<string, any>>;
+  // my-app/src/services/demo/BackendController.ts
+  // ... existing code ...
+
+  // 定义 API.Result__ 接口
+  interface Result__ {
+    success: boolean;
+    message?: string;
+    data?: any; // 根据需要调整类型
   }
 
-  interface PageInfo_UserInfo_ {
-    /** 
-1 */
-    current?: number;
-    pageSize?: number;
-    total?: number;
-    list?: Array<UserInfo>;
+  interface Result_TeaCategory__ {
+    success: boolean;
+    message?: string;
+    data?: TeaCategory; // 根据需要调整类型
   }
 
-  interface Result {
-    success?: boolean;
-    errorMessage?: string;
-    data?: Record<string, any>;
+  interface Result_TeaSpecification__ {
+    success: boolean;
+    message?: string;
+    data?: TeaSpecification; // 根据需要调整类型
   }
 
-  interface Result_PageInfo_UserInfo__ {
-    success?: boolean;
-    errorMessage?: string;
-    data?: PageInfo_UserInfo_;
+  // 定义 API.Result_PageInfo_TeaCategory__ 接口
+  interface Result_PageInfo_TeaCategory__ {
+    success: boolean;
+    message?: string;
+    data?: {
+      total: number;
+      items: TeaCategory[];
+    };
   }
 
-  interface Result_UserInfo_ {
-    success?: boolean;
-    errorMessage?: string;
-    data?: UserInfo;
+  // 定义 TeaCategory 接口
+  interface TeaCategory {}
+
+  // 定义 API.Result_PageInfo_TeaSpecification__ 接口
+  interface Result_PageInfo_TeaSpecification__ {
+    success: boolean;
+    message?: string;
+    data?: {
+      total: number;
+      items: TeaSpecification[];
+    };
   }
 
-  interface Result_string_ {
-    success?: boolean;
-    errorMessage?: string;
-    data?: string;
+  // 定义 TeaSpecification 接口
+  interface TeaSpecification {
+    id: number;
+    name: string;
+    category_id: number;
+    cans_per_unit: number;
   }
 
-  type UserGenderEnum = 'MALE' | 'FEMALE';
-
-  interface UserInfo {
-    id?: string;
-    name?: string;
-    /** nick */
-    nickName?: string;
-    /** email */
-    email?: string;
-    gender?: UserGenderEnum;
-  }
-
-  interface UserInfoVO {
-    name?: string;
-    /** nick */
-    nickName?: string;
-    /** email */
-    email?: string;
-  }
-
-  type definitions_0 = null;
+  // ... existing code ...
 }
